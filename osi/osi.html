@@ -2,6 +2,28 @@
 <!--Name: William Payne
     Purpose: CSC 221  
 -->
+
+<div class="audio-container">
+    <audio id="myAudio" src="xpstartup.mp3"></audio>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the audio element
+    var audio = document.getElementById("myAudio");
+
+    // Play the audio
+    audio.play();
+
+    // Once the audio has finished playing, remove the audio element
+    audio.onended = function() {
+        var audioContainer = document.querySelector(".audio-container");
+        audioContainer.parentNode.removeChild(audioContainer);
+    };
+});
+</script>
+
+
 <html lang="en-us">
 <head>
 <title>Operating Systems</title>
