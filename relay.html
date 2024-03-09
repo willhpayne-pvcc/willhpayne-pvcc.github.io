@@ -6,44 +6,28 @@
     <title>WebSocket Relay Server</title>
     <script>
         var clients = [];
+        var ws;
 
         function startServer() {
             var wssUrl = "wss://willhpayne-pvcc.github.io/relay";
-            var wssServer = new WebSocketServer(wssUrl);
+            ws = new WebSocket(wssUrl);
 
-            wssServer.on("connection", function (ws) {
-                console.log("New connection established");
+            ws.onopen = function() {
+                console.log("WebSocket connection established");
+            };
 
-                ws.on("message", function (message) {
-                    console.log("Received message:", message);
-                    relayMessage(message, ws);
-                });
+            ws.onmessage = function(event) {
+                console.log("Received message:", event.data);
+                // Handle received message
+            };
 
-                ws.on("close", function () {
-                    console.log("Connection closed");
-                    removeClient(ws);
-                });
+            ws.onclose = function(event) {
+                console.log("WebSocket connection closed", event.code, event.reason);
+            };
 
-                // Add new client to the list
-                clients.push(ws);
-            });
-
-            console.log("WebSocket server started");
-        }
-
-        function relayMessage(message, sender) {
-            clients.forEach(function (client) {
-                if (client !== sender && client.readyState === WebSocket.OPEN) {
-                    client.send(message);
-                }
-            });
-        }
-
-        function removeClient(ws) {
-            var index = clients.indexOf(ws);
-            if (index !== -1) {
-                clients.splice(index, 1);
-            }
+            ws.onerror = function(error) {
+                console.error("WebSocket error:", error);
+            };
         }
 
         // Start the WebSocket server when the page loads
