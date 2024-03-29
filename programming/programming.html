@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ch. 5 Programming</title>
+
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-image: url('wp-cat.png');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+    
+        table {
+            width: 80%;
+            background-color: #ffffff;
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+    
+        th {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 10px;
+            text-align: left;
+        }
+    
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+    
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    
+        h1 {
+            color: #1a1a1a;
+            font-size: 30pt;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+        }
+    
+        h2 {
+            color: #464646;
+            font-size: 18pt;
+            font-family: Optima, sans-serif;
+        }
+    
+        h3 {
+            color: #777777;
+            font-size: 14pt;
+            font-family: Optima, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="table">
+            <table border="2">
+                <tr>
+                    <td style="width:25%;"><a href="https://willhpayne-pvcc.github.io/"> Home </a></td>
+                    <td style="width:25%;"><a href="https://www.pvcc.edu/"> PVCC </a></td>
+                    <td style="width:25%;"><a href="https://www.w3schools.com/"> W3 Schools </a></td>
+                    <td style="width:25%;"><a href="contactus.html"> Contact Us </a></td>
+                </tr>
+            </table>
+        </div>   
+        <h1>Chapter 5: Programming Algorithms & Software Testing</h1>
+    </header>
+
+    <main>
+        <img src="ch5img.png" alt="Chapter 5 Image">
+        
+        <section>
+            <h2>Phases of Computer Program Development</h2>
+            <ul>
+                <li>Phase 1: Understand the problem</li>
+                <li>Phase 2: Design an algorithm to solve the problem</li>
+                <li>Phase 3: Write the program code in appropriate language based on the algorithm</li>
+                <li>Phase 4: Enter the program and save</li>
+                <li>Phase 5: Execute the program</li>
+                <li>Phase 6: Test the program, find errors and debug, then retest</li>
+                <li>Phase 7: Document and evaluate the program</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Programming Structures:</h2>
+            <ul>
+                <li>Sequential structure: Top-down execution</li>
+                <li>Decision structures: if/then/else</li>
+                <li>Iterative (Looping):
+                    <ul>
+                        <li>while loop: continue looping as long something is true</li>
+                        <li>repeat/until loop: continue looping until something is true</li>
+                        <li>for loop: loop a given number of times</li>
+                    </ul>
+                </li>
+                <li>Recursive structures:
+                    <ul>
+                        <li>Repeat a set of instructions as a subtask of itself</li>
+                        <li>Repetition continues until:
+                            <ul>
+                                <li>degenerative case, which is a termination condition, is met</li>
+                                <li>(degenerative case is also called a "base case")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+        <section>
+            <h3>Two Classic Programming/Database Problems</h3>
+            <ul>
+                <li>Sorting: Descending order/Ascending order
+                    <ul>
+                        <li>Sorting numbers</li>
+                        <li>Sorting strings (in accordance with ASCII values)</li>
+                    </ul>
+                </li>
+                <li>Searching: find specific data that meet a certain criteria
+                    <ul>
+                        <li>In database:
+                            <ul>
+                                <li>Filters: temporary search</li>
+                                <li>Queries: search criteria are saved so they don't have to be recreated</li>
+                            </ul>
+                        </li>
+                        <li>Two popular search techniques:
+                            <ul>
+                                <li>Sequential search: search from top to bottom or bottom to top, one item at a time</li>
+                                <li>Binary search:
+                                    <ul>
+                                        <li>Only works if data is SORTED first</li>
+                                        <li>Start in the middle, then go to half of that, etc.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+        <section>
+            <h4>Two Classic Program Goals:</h4>
+            <ul>
+                <li>Efficiency: Program takes minimal time and/or resources</li>
+                <li>Correctness: Program runs in expected ways and works for all expected conditions</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h5>Software Testing and Verification</h5>
+        </section>
+    
+        <table>
+            <tr>
+                <th>Kind of Tests</th>
+            </tr>
+            <tr>
+                <td>Acceptance Testing</td>
+                <td>Verifying whether the whole system works as intended.</td>
+            </tr>
+            <tr>
+                <td>Integration Testing</td>
+                <td>Ensuring that software components or functions operate together.</td>
+            </tr>
+            <tr>
+                <td>Unit Testing</td>
+                <td>Validating that each software unit performs as expected. A unit is the smallest testable component of an application</td>   
+            </tr>
+            <tr>
+                <td>Functional Testing</td>
+                <td>Checking functions by emulating business scenarios, based on functional requirements. Black-box testing is a common way to verify functions.</td>
+            </tr>
+            <tr>
+                <td>Performance Testing</td>
+                <td>Testing how the software performs under different workloads. Load testing, for example, is used to evaluate performance under real-life load conditions.</td>
+            </tr>
+            <tr>
+                <td>Regression Testing</td>
+                <td>Checking whether new features break or degrade functionality. Sanity testing can be used to verify menus, functions and commands at the surface level, when there is no time for a full regression test.</td>
+            </tr>
+            <tr>
+                <td>Stress Testing</td>
+                <td>Testing how much strain the system can take before it fails. Considered to be a type of non-functional testing.</td>
+            </tr>
+            <tr>
+                <td>Usability Testing</td>
+                <td>Validating how well a customer can use a system or web application to complete a task.</td>
+            </tr>
+        </table>
+    
+        <section>
+            <h6> Software testing is done to detect:</h6>
+            <ul>
+                <li>Architectural flaws</li>
+                <li>Poor Design Decisions</li>
+                <li>Invalid or Incorrect Functionality</li>
+                <li>Security vulnerabilities</li>
+                <li>Scalability Issues</li>
+            </ul>
+        </section>
+        
+        <table>
+            <tr>
+                <th>Testing best practices:</th>
+            </tr>
+            <tr>
+                <td>Continuous Testing</td>
+                <td>When creating a software project, teams regularly check each version of the software as it's developed. They use automated testing tools that are part of the deployment process. This helps validate the software in real-life situations early on, which makes the design better and lowers the chances of problems later.</td>
+            </tr>
+            <tr>
+                <td>Configuration Management</td>
+                <td>In organizations, important testing materials are stored in one central place, and it's easy to keep track of which versions of the software need testing. Teams can access various materials like code, requirements, design documents, models, test scripts, and results. Effective systems have security measures and records to ensure teams follow rules without needing a lot of administrative work.</td>
+            </tr>
+            <tr>
+                <td>Service Virtualization</td>
+                <td>When developing code, testing environments might not be ready, especially in the early stages. Service virtualization helps by mimicking missing or incomplete services and systems. This allows teams to test without relying on everything being in place. They can easily reuse, deploy, and adjust configurations to test various scenarios without changing the original environment.</td>
+            </tr>
+            <tr>
+                <td>Defect or "Bug Tracking"</td>
+                <td>Both testing and development teams find it crucial to keep an eye on defects to gauge and enhance the quality of their work. Automated tools help them keep track of defects, understand how widespread and impactful they are, and identify any related issues.</td>
+            </tr>
+            <tr>
+                <td>Metrics and Reporting</td>
+                <td>Reporting and analytics help team members share updates, goals, and test results. Advanced tools bring together project metrics and display results on a dashboard. This allows teams to quickly understand the overall status of a project and keep an eye on connections between testing, development, and other project components.</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>From: <a href="https://www.ibm.com/topics/software-testing" target="_blank">IBM What is software testing?</a></p>
+    </footer>
+</body>
+</html>
