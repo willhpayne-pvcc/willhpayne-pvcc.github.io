@@ -29,7 +29,7 @@ def main():
             break
 
 def get_user_data():
-    global order_counts, num_drinks, num_breadsticks, num_pizzas
+    global order_counts, num_drinks, num_breadsticks, num_pizzas, size
     size = input("Enter pizza size (S, M, L, XL): ").lower()
     if size in order_counts:
         order_counts[size] += 1
@@ -41,7 +41,8 @@ def get_user_data():
     num_breadsticks += int(input("How many breadsticks do you want? "))
 
 def perform_calculations():
-    global subtotal, sales_tax, total, order_counts, num_drinks, num_breadsticks, num_pizzas
+    global subtotal, sales_tax, total, order_counts, num_drinks, num_breadsticks, num_pizzas, subtotal_pizza
+    subtotal_pizza = sum(order_counts[size] * PIZZA_PRICES[size] for size in order_counts)
     subtotal = sum(order_counts[size] * PIZZA_PRICES[size] for size in order_counts)
     subtotal += num_drinks * DRINK_PRICE + num_breadsticks * BREADSTICK_PRICE
     sales_tax = subtotal * SALES_TAX_RATE
@@ -52,8 +53,7 @@ def display_results():
     print('****** Gaias Pizzeria ******')
     print('Your delicious local pizza place')
     print('-------------------------------')
-    for size, count in order_counts.items():
-        print(f'{size.upper()} Pizzas \t${PIZZA_PRICES[size] * count:,.2f}')
+    print(f"{size.upper()} Pizza   \t$ {subtotal_pizza}")
     print('Drinks       \t$', num_drinks * DRINK_PRICE)
     print('Breadsticks  \t$', num_breadsticks * BREADSTICK_PRICE)
     print('------------------------------')
