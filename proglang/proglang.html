@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chapter 6: Programming Languages</title>
+  <style>
+    body {
+        font-family: 'Helvetica', sans-serif;
+        background-image: url('wp-cat.png');
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
 
+    table {
+        width: 80%;
+        background-color: #ffffff;
+        margin: auto;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        padding: 10px;
+        text-align: left;
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        color: #1a1a1a;
+        font-size: 30pt;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+    }
+
+    h2 {
+        color: #464646;
+        font-size: 18pt;
+        font-family: Optima, sans-serif;
+    }
+
+    h3 {
+        color: #777777;
+        font-size: 14pt;
+        font-family: Optima, sans-serif;
+    }
+</style>
+</head>
+<body>
+  <div id="table">
+    <table border="2">
+        <tr>
+            <td style="width:25%;"><a href="https://willhpayne-pvcc.github.io/"> Home </a></td>
+            <td style="width:25%;"><a href="https://www.pvcc.edu/"> PVCC </a></td>
+            <td style="width:25%;"><a href="https://www.w3schools.com/"> W3 Schools </a></td>
+            <td style="width:25%;"><a href="contactus.html"> Contact Us </a></td>
+        </tr>
+    </table>
+</div>   
+
+  <table class="outer-table">
+    <tr>
+      <td class="centered-title">
+
+        <center>
+          <h2>Chapter 6: Programming Languages</h2>
+        </center>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table class="inner-table">
+          <thead>
+            <tr>
+              <th class="small-column">Terms</th>
+              <th>Definitions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Machine Language</td>
+              <td>Machine language is a collection of binary digits or bits that the computer reads and interprets. Machine language is the only language a computer can understand.</td>
+            </tr>
+            <tr>
+              <td>Debugging</td>
+              <td>Locating and correcting errors in machine languages within a program.</td>
+            </tr>
+            <tr>
+                <td>Assembler</td>
+                <td>Converts mnemonic expressions into machine language instructions.</td>
+            </tr>
+            <tr>
+                <td>Assembly Language</td>
+                <td>A mnemonic system for representing programs, known also as second-generation languages.</td>
+            </tr>
+            <tr>
+                <td>Translator</td>
+                <td>Translates programs expressed in these high-level primitives into machine-language programs.</td>
+            </tr>
+            <tr>
+                <td>Compiler</td>
+                <td>Translation programs that compile several machine instructions into short sequences to simulate the activity requested by a single high-level primitive.</td>
+            </tr>
+            <tr>
+                <td>Interpreter</td>
+                <td>An alternative to translators, emerged as another means of implementing third-generation languages.</td>
+            </tr>
+            <tr>
+                <td>Cross-platform Software</td>
+                <td>Software that is independent of an operating system's design as well as the machine's hardware design and is therefore executable throughout a network.</td>
+            </tr>
+            <tr>
+                <td>Natural Language</td>
+                <td>Languages such as English, German, and Latin.</td>
+            </tr>
+            <tr>
+                <td>Formal Language</td>
+                <td>Languages such as programming languages, like Java, C, and Python.</td>
+            </tr>
+            <tr>
+                <td>Machine Independence</td>
+                <td>A term applied to software that is not dependent on the properties of a particular machine, and can therefore be used on any machine. </td>
+            </tr>
+            <tr>
+                <td>High-Level Programming Language</td>
+                <td>Provides more abstractions for the programmer and make it easier for people to read and write a program.</td>
+            </tr>
+            <tr>
+                <td>Object-Oriented Programming (OOP)</td>
+                <td>Following this paradigm, a software system is viewed as a collection of units, called objects, each of which is capable of performing the actions that are immediately related to itself as well as requesting actions of other objects.</td>
+            </tr>
+            <tr>
+                <td>Scripted Language</td>
+                <td>A subset of the imperative programming languages is the collection of languages known as scripting languages. These languages are typically used to perform administrative tasks rather than to develop complex programs.</td>
+            </tr>
+            <tr>
+                <td>Data Types (Integer, Float, String)</td>
+                <td>
+                    <ol>
+                        <li>Data Types: Declarative statements that require the programmer to describe the type of data that will be stored at the memory location associated with the variable.</li>
+                        <li>Integer: Refers to numeric data consisting of whole numbers.</li>
+                        <li>Float: Refers to numeric data that might contain values other than whole numbers, probably stored in floating-point notation.</li>
+                        <li>String: A data type used in programming, that is used to represent text rather than numbers.</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>Primitive Data Type</td>
+                <td>The data types that are included as primitives in a programming language, such as int for integer and char for character.</td>
+            </tr>
+            <tr>
+                <td>Data Structure</td>
+                <td>The conceptual shape or arrangement of data. For example, text is normally viewed as a long string of characters whereas sales records might be envisioned as a rectangular table of numeric values, where each row represents the sales made by a particular employee and each column represents the sales made on a particular day.</td>
+            </tr>
+            <tr>
+                <td>Python Collection Data Structures (List, Tuple, Set, Dictionary)</td>
+                <td>
+                    <ol>
+                        <li>List: Lists are used to store multiple items in a single variable. Created using square brackets.</li>
+                        <li>Tuple: Used to store multiple items in a single variable, ordered and unchangeable. Written with round brackets.</li>
+                        <li>Set: Used to store multiple items in a single variable. It is unordered, unchangeable, and unindexed. Written with curly brackets.</li>
+                        <li>Dictionary: Used to store data values in key:value pairs. It is ordered, changeable and do not allow duplicates. Written with curly brackets, and have keys and values.</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>Function</td>
+                <td>A set of instructions for performing a task that can be used as an abstract tool by other program units.</td>
+            </tr>
+            <tr>
+                <td>Local Variable</td>
+                <td>A variable declared within a function, meaning that it can be referenced only within that function.</td>
+            </tr>
+            <tr>
+                <td>Global Variable</td>
+                <td>Variables whose scopes are not restricted to a particular part of a program.</td>
+            </tr>
+            <tr>
+                <td>Source Program</td>
+                <td>The program in its original form.</td>
+            </tr>
+            <tr>
+                <td>Object Program</td>
+                <td>The program in its translated version.</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
